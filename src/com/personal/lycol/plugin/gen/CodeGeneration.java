@@ -84,18 +84,19 @@ public class CodeGeneration {
         //超类实体
         if(StringUtils.isNotBlank(mybatisPlusDbProperties.getTablePrefix()))
         strategy.setTablePrefix(mybatisPlusDbProperties.getTablePrefix());// 此处可以修改为您的表前缀
+        if(StringUtils.isNotBlank(mybatisPlusDbProperties.getSuperEntityClass()))
         strategy.setSuperEntityClass(mybatisPlusDbProperties.getSuperEntityClass());
         gc.setAuthor(System.getProperty("user.name"));// 作者
         gc.setOutputDir(mybatisPlusDbProperties.getOutDir());//输出文件路径
 
           List<String> lists=  mybatisPlusDbProperties.getSuperEntityColumns();
           if(null!=lists&&lists.size()>0) {
-              strategy.setSuperEntityColumns(mybatisPlusDbProperties.getSuperEntityColumns().toArray(new String[mybatisPlusDbProperties.getSuperEntityColumns().size()]));
+              strategy.setSuperEntityColumns(lists.toArray(new String[lists.size()]));
           }
           if(!org.springframework.util.CollectionUtils.isEmpty(mybatisPlusDbProperties.getTableList())){
             strategy.setInclude(mybatisPlusDbProperties.getTableList().toArray(new String[mybatisPlusDbProperties.getTableList().size()])); // 需要生成的表
         }
-            dsc.setDriverName(mybatisPlusDbProperties.getDriverName());
+        dsc.setDriverName(mybatisPlusDbProperties.getDriverName());
         dsc.setUsername(mybatisPlusDbProperties.getUserName());
         dsc.setPassword(mybatisPlusDbProperties.getPassword());
         dsc.setUrl(mybatisPlusDbProperties.getJdbcUrl());
