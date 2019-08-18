@@ -1,1 +1,2 @@
-生成Mybatis Plus 代码的Idea插件
+"# MyBatisPlusGenCodeIdeaPlugin" 
+"# MyBatisPlusGenCodeIdeaPlugin" 
