@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mybatisGeneratorPlugin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mybatisGeneratorPlugin.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
