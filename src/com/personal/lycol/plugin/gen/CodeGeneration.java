@@ -101,11 +101,10 @@ public class CodeGeneration {
         dsc.setPassword(mybatisPlusDbProperties.getPassword());
         dsc.setUrl(mybatisPlusDbProperties.getJdbcUrl());
 
-        mpg.setTemplateEngine(new CustomTemplate());
         return mpg;
     }
 
-    private static  class CustomTemplate extends VelocityTemplateEngine {
+    /*private static  class CustomTemplate extends VelocityTemplateEngine {
 
         @Override
         public Map<String, Object> getObjectMap(TableInfo tableInfo) {
@@ -114,7 +113,7 @@ public class CodeGeneration {
             return objectMap;
         }
 
-    }
+    }*/
 
 
 

@@ -12,7 +12,7 @@ public class MybatisGeneratorCodeAction extends AnAction {
 
         CodeDialog dialog = new CodeDialog();
         dialog.pack();
-        dialog.setModal(false);
+        dialog.setModal(true);
         dialog.setVisible(true);
         dialog.setSize(800,400);
     }
